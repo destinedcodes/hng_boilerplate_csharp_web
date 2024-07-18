@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: "prod"
+      name: "production"
       url: ${{env.URL}}
 
     steps:

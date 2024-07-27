@@ -13,7 +13,5 @@ jobs:
     - name: Print GitHub Context
       run: |
         echo "GitHub Context:"
-        echo "Help me" > github-context.json
-        cat github-context.json
-        echo "${{ github }}" > github-context.json
+        echo '{"github": '$(echo '${{ toJson(github) }}')'}' > github-context.json
         cat github-context.json

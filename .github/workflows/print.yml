@@ -13,4 +13,5 @@ jobs:
     - name: Print GitHub Context
       run: |
         echo "GitHub Context:"
-        echo "${{ toJson(github) }}"
+        echo "${{ toJson(github) }}" > github-context.json
+        cat github-context.json
